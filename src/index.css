@@ -10,7 +10,7 @@ html {
   line-height: 1.5;
 
   color: #ebe7ef;
-  background: radial-gradient(#280a48, #20043d);
+  background: radial-gradient(#05190a, #000000);
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -20,33 +20,6 @@ html {
   min-height: 80rem;
 }
 
-header {
-  text-align: center;
-  margin: 3rem 0;
-}
-
-header img {
-  height: 5rem;
-  width: 10rem;
-  object-fit: cover;
-}
-
-header h1 {
-  margin: 0;
-  font-family: 'Raleway', sans-serif;
-  font-size: 5rem;
-  background: linear-gradient(40deg, #ea00ff, #ea00ff, #03d5ff, #03d5ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.5));
-}
-
-header p {
-  margin: 0;
-  font-size: 1.25rem;
-  color: #8964b0;
-  font-family: 'Raleway', sans-serif;
-}
 
 main {
   width: 90%;
@@ -57,7 +30,7 @@ main {
 #core-concepts {
   padding: 2rem;
   border-radius: 6px;
-  background-color: #140524;
+  background: linear-gradient(40deg, #003d0655, #00530c55, #0055ff55, #0213ff55);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
@@ -65,7 +38,7 @@ main h2 {
   text-align: center;
   font-family: 'Raleway', sans-serif;
   margin: 0 0 1.5rem 0;
-  color: #a18aba;
+  color: #8aba90;
 }
 
 #core-concepts ul {
@@ -118,7 +91,7 @@ main h2 {
   border: none;
   border-radius: 6px;
   background-color: transparent;
-  color: #a18aba;
+  color: #8aba91;
   font-family: 'Raleway', sans-serif;
   font-size: 1rem;
   cursor: pointer;
@@ -126,19 +99,19 @@ main h2 {
 }
 
 #examples menu button:hover {
-  background-color: #1b082f;
-  color: #ebe7ef;
+  background-color: #082f0e;
+  color: #e7e7ef;
 }
 
 #examples menu button.active {
-  background-color: #7925d3;
-  color: #ebe7ef;
+  background-color: #25d325;
+  color: #e7eaef;
 }
 
 #tab-content {
   padding: 1rem;
   border-radius: 6px;
-  background-color: #2f1d43;
+  background: linear-gradient(40deg, #003d0688, #00530c88, #0055ff88, #0213ff88);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 }
 
