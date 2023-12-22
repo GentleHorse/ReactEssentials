@@ -27,18 +27,6 @@ export default function Setup() {
   return (
     <Section title="Setup" id="setup">
       <Tabs
-        /**
-         * Built-in tags
-        */  
-        // ButtonsContainer="menu"
-        // ButtonsContainer="div"
-        // ButtonsContainer="ul"
-
-        /**
-         * Custom tags
-        */
-        // ButtonsContainer={Section}
-
         buttons={
           <>
             <TabButton

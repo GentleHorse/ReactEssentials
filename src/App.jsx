@@ -7,6 +7,8 @@ import NormalContent from "./components/utils/NormalContent.jsx";
 import ListLink from "./components/utils/ListLink.jsx";
 import MouseEvents from "./components/MouseEvents/MouseEvents.jsx";
 import DragEvents from "./components/DragEvents/DragEvents.jsx";
+import StateUseCases from "./components/StateUseCases/StateUseCases.jsx";
+import PropsUseCases from "./components/PropsUseCases/PropsUseCases.jsx";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Setup />
         <MouseEvents />
         <DragEvents />
+        <StateUseCases />
+        <PropsUseCases />
       </main>
     </>
   );
