@@ -380,8 +380,8 @@ export default function Tabs({ children, buttons }) {
       code: `
 --->> App.jsx <<---------------------------------------------------
 
-<Tabs
-	ButtonsContainer="menu"
+<Tabs 
+  ButtonsContainer="menu"
   buttons={
     <>
       <TabButton
