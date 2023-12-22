@@ -262,18 +262,24 @@ main h2 {
 }
 
 /**
-* State Use Cases, Props Use Case
+* State Use Cases, Props Use Case, React Hooks, Built-in React Components
 */
+#built-in-react-components,
+#react-hooks,
 #props-use-cases,
 #state-use-cases {
   margin: 3rem auto;
 }
 
+#built-in-react-components h2,
+#react-hooks h2,
 #props-use-cases h2,
 #state-use-cases h2 {
   text-align: left;
 }
 
+#built-in-react-components menu,
+#react-hooks menu,
 #props-use-cases menu,
 #state-use-cases menu {
   margin: 1rem 0;
@@ -283,6 +289,8 @@ main h2 {
   list-style: none;
 }
 
+#built-in-react-components menu button,
+#react-hooks menu button,
 #props-use-cases menu button,
 #state-use-cases menu button {
   padding: 0.5rem 1rem;
@@ -296,12 +304,16 @@ main h2 {
   transition: all 0.2s ease-in-out;
 }
 
+#built-in-react-components menu button:hover,
+#react-hooks menu button:hover,
 #props-use-cases menu button:hover,
 #state-use-cases menu button:hover {
   background-color: #082f0e;
   color: #e7e7ef;
 }
 
+#built-in-react-components menu button.active,
+#react-hooks menu button.active,
 #props-use-cases menu button.active,
 #state-use-cases menu button.active {
   background-color: #25d325;
