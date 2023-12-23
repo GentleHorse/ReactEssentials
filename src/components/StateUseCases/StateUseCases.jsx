@@ -53,6 +53,12 @@ export default function StateUseCases() {
               >
                 Update object-state immutably
               </TabButton>
+              <TabButton
+                isSelected={selectedTopic === "liftingStateUp"}
+                onClick={() => selectHandler("liftingStateUp")}
+              >
+                Lifting state up
+              </TabButton>
             </>
           }
         >

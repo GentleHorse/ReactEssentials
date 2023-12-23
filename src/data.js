@@ -371,6 +371,96 @@ export default function GameBoard() {
 }
 `,
   },
+  liftingStateUp: {
+    title: "Lifting state up",
+    description:
+      "Lift the state up to the closest ancestor component (= App.jsx) that has access to all components (= Player.jsx, GameBoard.jsx) that need to work with that state (= activePlayer). Player.jsx uses that state for css styling and GameBoard.jsx does for game logic (switching symbols between 'X' and 'O' + fetching current active player symbol).",
+    code: `
+--->> App.jsx <<---------------------------------------------------------------
+
+const [activePlayer, setActivePlayer] = useState("X");
+
+  const selectSquareHandler = () => {
+    setActivePlayer((currentActivePlayer) =>
+      currentActivePlayer === "X" ? "O" : "X"
+    );
+  };
+
+  return (
+    <main>
+      <div id="game-container">
+        <ol id="players" className="highlight-player">
+          <Player
+            initialName="Player-1"
+            symbol="X"
+            isActive={activePlayer === "X"}
+          />
+          <Player
+            initialName="Player-2"
+            symbol="O"
+            isActive={activePlayer === "O"}
+          />
+        </ol>
+        <GameBoard
+          onSelectSquare={selectSquareHandler}
+          activePlayerSymbol={activePlayer}
+        />
+      </div>
+      LOG
+    </main>
+
+--->> Player.jsx <<------------------------------------------------------------
+
+return (
+  <li className={isActive ? "active" : undefined}>
+    <span className="player">
+      {editablePlayerName}
+      <span className="player-symbol">{symbol}</span>
+    </span>
+    <button onClick={editNameHandler}>
+      {isEditing ? "Save" : "Edit"}
+    </button>
+  </li>
+);
+
+--->> GameBoard.jsx <<---------------------------------------------------------
+
+export default function GameBoard({ onSelectSquare, activePlayerSymbol }) {
+  const [gameBoard, setGameBoard] = useState(initialGameBoard);
+
+  const selectSquareHandler = (rowIndex, colIndex) => {
+    setGameBoard((prevGameBoard) => {
+      const updatedBoard = [
+        ...prevGameBoard.map((innerArray) => [...innerArray]),
+      ];
+      updatedBoard[rowIndex][colIndex] = activePlayerSymbol;
+
+      return updatedBoard;
+    });
+
+    onSelectSquare();
+  };
+
+  return (
+    <ol id="game-board">
+      {gameBoard.map((row, rowIndex) => (
+        <li key={rowIndex}>
+          <ol>
+            {row.map((playerSymbol, colIndex) => (
+              <li key={colIndex}>
+                <button onClick={() => selectSquareHandler(rowIndex, colIndex)}>
+                  {playerSymbol}
+                </button>
+              </li>
+            ))}
+          </ol>
+        </li>
+      ))}
+    </ol>
+  );
+}
+`,
+  },
 }
 
 /**
