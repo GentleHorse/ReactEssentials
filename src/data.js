@@ -243,7 +243,7 @@ export default function TabButton({ children, onSelect, ...props }) {
   updatingStateBasedOnOldState: {
     title: "Updating state based on old state",
     description:
-      "Pass a function to the state updating function. This function will automatically be called by React and will receive the guranteed latest state value.",
+      "Pass a function to the state updating function. This function will automatically be called by React and will receive the guranteed latest state value. You need to call a function inside the state updating function(= setIsToggle()) because state WILL NOT INSTANTLY BE UPDATED since React set scheduling. Thus, 'setIsToggle(!isToggle)' is wrong!!",
     code: `
 export default function App() {
   const [isToggle, setIsToggle] = React.useState(false);
@@ -257,6 +257,116 @@ export default function App() {
           <p className={isToggle ? "active" : ""}>Style me!</p>
           <button onClick={toggleHandler}>Toggle style</button>
       </div>
+  );
+}
+`,
+  },
+  twoWayBinding: {
+    title: "Two-way binding",
+    description:
+      "Two-way binding gives components in your application a way to share data. Use two-way binding to listen for events and update values simultaneously between parent and child components.",
+    code: `
+--->> App.jsx <<---------------------------------------------------
+
+import React from 'react';
+import Review from './Review.js'
+
+function App() {
+    const [feedback, setFeedback] = React.useState();
+    const [student, setStudent] = React.useState();
+    
+    const feedbackHandler = (event) => {
+        setFeedback(event.target.value);
+    }
+    
+    const studentHandler = (event) => {
+        setStudent(event.target.value);
+    }
+    
+  return (
+    <>
+      <section id="feedback">
+        <h2>Please share some feedback</h2>
+        <p>
+          <label>Your Feedback</label>
+          <textarea value={feedback} onChange={feedbackHandler}/>
+        </p>
+        <p>
+          <label>Your Name</label>
+          <input type="text" value={student} onChange={studentHandler} />
+        </p>
+      </section>
+      <section id="draft">
+        <h2>Your feedback</h2>
+
+        <Review feedback={feedback} student={student} />
+
+        <p>
+          <button>Save</button>
+        </p>
+      </section>
+    </>
+  );
+}
+
+export default App
+
+--->> Review.jsx <<------------------------------------------------
+
+export default function Review({ feedback, student }) {
+  return (
+    <figure>
+      <blockquote>
+        <p>{feedback}</p>
+      </blockquote>
+      <figcaption>{student}</figcaption>
+    </figure>
+  );
+}
+
+`,
+  },
+  updateObjectStateImmutably: {
+    title: "Update object and array state immutably",
+    description:
+      "Objects & arrays (which technically are objects) are reference values in JavaScript. Therefore you should not mutate them directly, instead create a (deep) copy first! In below example, inside the selectSquarehandler function, ‘prevGameBoard’ is not mutated instead using its copy ‘updatedBoard’ for updating the state.",
+    code: `
+const initialGameBoard = [
+  [null, null, null],
+  [null, null, null],
+  [null, null, null],
+];
+
+export default function GameBoard() {
+  const [gameBoard, setGameBoard] = useState(initialGameBoard);
+
+  const selectSquareHandler = (rowIndex, colIndex) => {
+    setGameBoard((prevGameBoard) => {
+      const updatedBoard = [
+        ...prevGameBoard.map((innerArray) => [...innerArray]),
+      ];
+      updatedBoard[rowIndex][colIndex] = "X";
+
+      return updatedBoard;
+    });
+  };
+
+  return (
+    <ol id="game-board">
+      {gameBoard.map((row, rowIndex) => (
+        <li key={rowIndex}>
+          <ol>
+            {row.map((playerSymbol, colIndex) => (
+              <li key={colIndex}>
+                <button onClick={() => selectSquareHandler(rowIndex, colIndex)}>
+                  {playerSymbol}
+                </button>
+              </li>
+            ))}
+          </ol>
+        </li>
+      ))}
+    </ol>
   );
 }
 `,

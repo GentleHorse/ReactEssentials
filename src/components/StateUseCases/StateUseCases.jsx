@@ -41,6 +41,18 @@ export default function StateUseCases() {
               >
                 Updating based on old state
               </TabButton>
+              <TabButton
+                isSelected={selectedTopic === "twoWayBinding"}
+                onClick={() => selectHandler("twoWayBinding")}
+              >
+                Two-way binding
+              </TabButton>
+              <TabButton
+                isSelected={selectedTopic === "updateObjectStateImmutably"}
+                onClick={() => selectHandler("updateObjectStateImmutably")}
+              >
+                Update object-state immutably
+              </TabButton>
             </>
           }
         >
