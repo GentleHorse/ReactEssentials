@@ -461,6 +461,90 @@ export default function GameBoard({ onSelectSquare, activePlayerSymbol }) {
 }
 `,
   },
+  oneObjectStateOneChangeHandler: {
+    title: "One object state and one change handler",
+    description:
+      "There's one object state which contains multiple 'key-value' pairs and one change handler, and if you want to update only one 'key-value' pair in correspondence with one of the identifiers, here's the answer.",
+    code: `
+/**
+ * Object State
+ */
+  const [userInput, setUserInput] = useState({
+      initialInvestment: 10000,
+      annualInvestment: 1200,
+      expectedReturn: 6,
+      duration: 10,
+    });
+  
+/**
+ * Change Handler
+ */
+  const changeHandler = (inputIdentifier, newValue) => {
+    setUserInput((prevUseInput) => {
+      return {
+        ...prevUseInput,
+        [inputIdentifier]: +newValue,  // "+" > string to number
+      };
+    });
+  };
+  
+/**
+ * JSX Renderer
+ */
+  return (
+    <section id="user-input">
+      <div className="input-group">
+        <p>
+          <label>intial investment</label>
+          <input
+            type="number"
+            required
+            value={userInput.initialInvestment}
+            onChange={(event) =>
+              changeHandler("initialInvestment", event.target.value)
+            }
+          />
+        </p>
+        <p>
+          <label>annual investment</label>
+          <input
+            type="number"
+            required
+            value={userInput.annualInvestment}
+            onChange={(event) =>
+              changeHandler("annualInvestment", event.target.value)
+            }
+          />
+        </p>
+      </div>
+      <div className="input-group">
+        <p>
+          <label>expected return</label>
+          <input
+            type="number"
+            required
+            value={userInput.expectedReturn}
+            onChange={(event) =>
+              changeHandler("expectedReturn", event.target.value)
+            }
+          />
+        </p>
+        <p>
+          <label>duration</label>
+          <input
+            type="number"
+            required
+            value={userInput.duration}
+            onChange={(event) =>
+              changeHandler("duration", event.target.value)
+            }
+          />
+        </p>
+      </div>
+    </section>
+  );
+`,
+  },
 }
 
 /**

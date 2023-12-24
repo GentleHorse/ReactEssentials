@@ -59,6 +59,12 @@ export default function StateUseCases() {
               >
                 Lifting state up
               </TabButton>
+              <TabButton
+                isSelected={selectedTopic === "oneObjectStateOneChangeHandler"}
+                onClick={() => selectHandler("oneObjectStateOneChangeHandler")}
+              >
+                One object state one change handler
+              </TabButton>
             </>
           }
         >
