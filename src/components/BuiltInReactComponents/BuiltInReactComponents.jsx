@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BUILT_IN_REACT_COMPONENTS } from "../../data";
+import { BUILT_IN_REACT_COMPONENTS } from "./data-built-in-react-components.js";
 import TabButton from "../utils/TabButton.jsx";
 import Section from "../utils/Section.jsx";
 import Tabs from "../utils/Tabs.jsx";

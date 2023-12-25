@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { EXAMPLES } from "../../data";
+import { EXAMPLES } from "./data-examples.js";
 import TabButton from "../utils/TabButton.jsx";
 import Section from "../utils/Section.jsx";
 import Tabs from "../utils/Tabs.jsx";

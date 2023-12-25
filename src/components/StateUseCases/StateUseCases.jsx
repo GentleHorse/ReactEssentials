@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { STATE_USE_CASES } from "../../data";
+import { STATE_USE_CASES } from "./data-state-use-cases.js";
 import TabButton from "../utils/TabButton.jsx";
 import Section from "../utils/Section.jsx";
 import Tabs from "../utils/Tabs.jsx";

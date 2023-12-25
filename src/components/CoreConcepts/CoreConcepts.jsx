@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-import { CORE_CONCEPTS } from "../../data";
+import { CORE_CONCEPTS } from "./data-core-concepts.js";
 import CoreConcept from "./CoreConcept";
 
 const CoreConceptSectionContainer = styled.section`
