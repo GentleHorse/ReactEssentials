@@ -26,7 +26,7 @@ export default function ReactHooks() {
   }
 
   return (
-    <Section title="React Hooks" id="react-hooks">
+    <Section title="React Hooks">
       <Tabs
         buttons={
           <>

@@ -8,6 +8,9 @@ import StateUseCases from "./components/StateUseCases/StateUseCases.jsx";
 import PropsUseCases from "./components/PropsUseCases/PropsUseCases.jsx";
 import ReactHooks from "./components/ReactHooks/ReactHooks.jsx";
 import BuiltInReactComponents from "./components/BuiltInReactComponents/BuiltInReactComponents.jsx";
+import CSSStyling from "./components/CSSStyling/CSSStyling.jsx";
+import StyledComponents from "./components/StyledComponents/StyledComponents.jsx";
+import TailwindCSS from "./components/TailwindCSS/TailwindCSS.jsx";
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
         <StateUseCases />
         <PropsUseCases />
         <BuiltInReactComponents />
+        <CSSStyling />
+        <StyledComponents />
+        <TailwindCSS />
         <MouseEvents />
         <DragEvents />
       </main>

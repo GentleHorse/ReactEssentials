@@ -26,7 +26,7 @@ export default function BuiltInReactComponents() {
   }
 
   return (
-    <Section title="Built-in React Components" id="built-in-react-components">
+    <Section title="Built-in React Components">
       <Tabs
         buttons={
           <>

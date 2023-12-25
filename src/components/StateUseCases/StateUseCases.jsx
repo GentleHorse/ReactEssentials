@@ -26,7 +26,7 @@ export default function StateUseCases() {
     }
   
     return (
-      <Section title="State Use Cases" id="state-use-cases">
+      <Section title="State Use Cases">
         <Tabs  
           buttons={
             <>

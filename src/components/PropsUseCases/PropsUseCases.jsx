@@ -26,7 +26,7 @@ export default function PropsUseCases() {
     }
   
     return (
-      <Section title="Props Use Cases" id="props-use-cases">
+      <Section title="Props Use Cases">
         <Tabs  
           buttons={
             <>
