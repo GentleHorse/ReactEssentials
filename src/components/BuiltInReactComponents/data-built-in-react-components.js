@@ -12,7 +12,7 @@ export const BUILT_IN_REACT_COMPONENTS = {
   strictMode: {
     title: "StrictMode",
     description:
-      "<StrictMode> lets you find common bugs in your components early during development.",
+      "<StrictMode> lets you find common bugs in your components early during development. Behind the scene, <StrictMode> executes wrapped every components twice.",
     code: `
 <StrictMode>
   <App />
