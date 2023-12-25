@@ -1,12 +1,11 @@
-import Section from "../utils/Section";
-import NormalContent from "../utils/NormalContent";
-import ListLink from "../utils/ListLink";
+import Section from "../utils/Section.jsx";
+import ListContent from "../utils/ListContent.jsx";
+import ListLink from "../utils/ListLink.jsx";
 
 export default function DragEvents() {
   return (
-    <Section title="Drag Events" id="drag-events">
-      <NormalContent>
-        <ul id="drag-events-names">
+    <Section title="Drag Events">
+      <ListContent>
           <ListLink
             src="https://www.w3schools.com/jsref/event_ondrag.asp"
             title="onDrag"
@@ -42,8 +41,7 @@ export default function DragEvents() {
             title="onDrop"
             text="A dragged element is dropped on the target"
           />
-        </ul>
-      </NormalContent>
+      </ListContent>
     </Section>
   );
 }

@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { REACT_HOOKS } from "../../data";
-import TabButton from "../utils/TabButton";
-import Section from "../utils/Section";
-import Tabs from "../utils/Tabs";
+import TabButton from "../utils/TabButton.jsx";
+import Section from "../utils/Section.jsx";
+import Tabs from "../utils/Tabs.jsx";
+import TabContent from "../utils/TabContent.jsx";
 
 export default function ReactHooks() {
   const [selectedTopic, setSelectedTopic] = useState();
@@ -14,13 +15,13 @@ export default function ReactHooks() {
   let tabContent = <p>Please select a topic.</p>;
   if (selectedTopic) {
     tabContent = (
-      <div id="tab-content">
+      <TabContent>
         <h3>{REACT_HOOKS[selectedTopic].title}</h3>
         <p>{REACT_HOOKS[selectedTopic].description}</p>
         <pre>
           <code>{REACT_HOOKS[selectedTopic].code}</code>
         </pre>
-      </div>
+      </TabContent>
     );
   }
 

@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { BUILT_IN_REACT_COMPONENTS } from "../../data";
-import TabButton from "../utils/TabButton";
-import Section from "../utils/Section";
-import Tabs from "../utils/Tabs";
+import TabButton from "../utils/TabButton.jsx";
+import Section from "../utils/Section.jsx";
+import Tabs from "../utils/Tabs.jsx";
+import TabContent from "../utils/TabContent.jsx";
 
 export default function BuiltInReactComponents() {
   const [selectedTopic, setSelectedTopic] = useState();
@@ -14,13 +15,13 @@ export default function BuiltInReactComponents() {
   let tabContent = <p>Please select a topic.</p>;
   if (selectedTopic) {
     tabContent = (
-      <div id="tab-content">
+      <TabContent>
         <h3>{BUILT_IN_REACT_COMPONENTS[selectedTopic].title}</h3>
         <p>{BUILT_IN_REACT_COMPONENTS[selectedTopic].description}</p>
         <pre>
           <code>{BUILT_IN_REACT_COMPONENTS[selectedTopic].code}</code>
         </pre>
-      </div>
+        </TabContent>
     );
   }
 

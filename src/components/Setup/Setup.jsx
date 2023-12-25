@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { SETUP } from "../../data";
-import TabButton from "../utils/TabButton";
-import Section from "../utils/Section";
-import Tabs from "../utils/Tabs";
+import TabButton from "../utils/TabButton.jsx";
+import Section from "../utils/Section.jsx";
+import Tabs from "../utils/Tabs.jsx";
+import TabContent from "../utils/TabContent.jsx";
 
 export default function Setup() {
   const [selectedTopic, setSelectedTopic] = useState();
@@ -14,18 +15,18 @@ export default function Setup() {
   let tabContent = <p>Please select a topic.</p>;
   if (selectedTopic) {
     tabContent = (
-      <div id="tab-content">
+      <TabContent>
         <h3>{SETUP[selectedTopic].title}</h3>
         <p>{SETUP[selectedTopic].description}</p>
         <pre>
           <code>{SETUP[selectedTopic].code}</code>
         </pre>
-      </div>
+      </TabContent>
     );
   }
 
   return (
-    <Section title="Setup" id="setup">
+    <Section title="Setup">
       <Tabs
         buttons={
           <>

@@ -1,12 +1,11 @@
-import Section from "../utils/Section";
-import NormalContent from "../utils/NormalContent";
-import ListLink from "../utils/ListLink";
+import Section from "../utils/Section.jsx";
+import ListContent from "../utils/ListContent.jsx";
+import ListLink from "../utils/ListLink.jsx";
 
 export default function MouseEvents() {
   return (
-    <Section title="Mouse Events" id="mouse-events">
-      <NormalContent>
-        <ul id="mouse-events-names">
+    <Section title="Mouse Events">
+      <ListContent>
           <ListLink
             src="https://www.w3schools.com/jsref/event_onclick.asp"
             title="onClick"
@@ -57,8 +56,7 @@ export default function MouseEvents() {
             title="onMouseUp"
             text="The mouse button is released over an element"
           />
-        </ul>
-      </NormalContent>
+      </ListContent>
     </Section>
   );
 }
