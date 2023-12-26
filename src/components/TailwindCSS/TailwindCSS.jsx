@@ -26,7 +26,7 @@ export default function TailwindCSS() {
   }
 
   return (
-    <Section title="CSS Styling">
+    <Section title="Tailwind CSS">
       <Tabs
         buttons={
           <>
