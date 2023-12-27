@@ -21,19 +21,19 @@ const CoreConceptSectionContainer = styled.section`
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 2rem;
+    gap: 5rem;
     flex-wrap: wrap;
     justify-content: center;
   }
 
   & li {
-    width: 10rem;
+    width: 20rem;
     text-align: center;
   }
 
   & li img {
-    height: 4rem;
-    width: 6rem;
+    height: 10rem;
+    width: 10rem;
     object-fit: cover;
   }
 

@@ -1,4 +1,17 @@
 export const STATE_USE_CASES = {
+  baseRule: {
+    title: "Base rule",
+    description:
+      "Calling the set function does not change the current state in the already executing code. It only affects what useState will return starting from the next render. This means new state WILL NOT IMMEDIATELY be reflected.",
+    code: `
+const [name, setName] = useState('Taylor');
+
+function handleClick() {
+  setName('Robin');
+  console.log(name); // Still "Taylor"!
+}
+`,
+  },
   switchingTabButtons: {
     title: "Switching tab buttons",
     description:

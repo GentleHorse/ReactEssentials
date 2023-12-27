@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { REACT_HOOKS } from "./data-react-hooks.js";
+import { USE_EFFECT  } from "./data-use-effect.js";
 import TabButton from "../utils/TabButton.jsx";
 import Section from "../utils/Section.jsx";
 import Tabs from "../utils/Tabs.jsx";
 import TabContent from "../utils/TabContent.jsx";
 
-export default function ReactHooks() {
+export default function UseEffectUseCase() {
   const [selectedTopic, setSelectedTopic] = useState();
 
   const selectHandler = (selectedButton) => {
@@ -16,61 +16,43 @@ export default function ReactHooks() {
   if (selectedTopic) {
     tabContent = (
       <TabContent>
-        <h3>{REACT_HOOKS[selectedTopic].title}</h3>
-        <p>{REACT_HOOKS[selectedTopic].description}</p>
+        <h3>{USE_EFFECT [selectedTopic].title}</h3>
+        <p>{USE_EFFECT [selectedTopic].description}</p>
         <pre>
-          <code>{REACT_HOOKS[selectedTopic].code}</code>
+          <code>{USE_EFFECT [selectedTopic].code}</code>
         </pre>
       </TabContent>
     );
   }
 
   return (
-    <Section title="React Hooks">
+    <Section title="useEffect">
       <Tabs
         buttons={
           <>
             <TabButton
-              isSelected={selectedTopic === "useState"}
-              onClick={() => selectHandler("useState")}
-            >
-              useState
-            </TabButton>
-            <TabButton
               isSelected={selectedTopic === "useEffectA"}
               onClick={() => selectHandler("useEffectA")}
             >
-              UseEffect A
+              Call at every render
             </TabButton>
             <TabButton
               isSelected={selectedTopic === "useEffectB"}
               onClick={() => selectHandler("useEffectB")}
             >
-              useEffect B
+              Call at initial render only
             </TabButton>
             <TabButton
               isSelected={selectedTopic === "useEffectC"}
               onClick={() => selectHandler("useEffectC")}
             >
-              useEffect C
+              Called at dependency changes
             </TabButton>
             <TabButton
               isSelected={selectedTopic === "useEffectD"}
               onClick={() => selectHandler("useEffectD")}
             >
-              useEffect D
-            </TabButton>
-            <TabButton
-              isSelected={selectedTopic === "useMemo"}
-              onClick={() => selectHandler("useMemo")}
-            >
-              useMemo
-            </TabButton>
-            <TabButton
-              isSelected={selectedTopic === "useRef"}
-              onClick={() => selectHandler("useRef")}
-            >
-              useRef
+              Store in localStorage
             </TabButton>
           </>
         }

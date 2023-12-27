@@ -7,7 +7,7 @@ const HeaderContainer = styled.header`
   margin: 3rem 0;
 
   & img {
-    height: 10rem;
+    height: 20rem;
     width: 20rem;
     object-fit: cover;
   }
