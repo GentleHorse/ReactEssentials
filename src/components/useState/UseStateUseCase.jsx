@@ -5,7 +5,7 @@ import Section from "../utils/Section.jsx";
 import Tabs from "../utils/Tabs.jsx";
 import TabContent from "../utils/TabContent.jsx";
 
-export default function StateUseCases() {
+export default function UseStateUseCase() {
   const [selectedTopic, setSelectedTopic] = useState();
 
   const selectHandler = (selectedButton) => {

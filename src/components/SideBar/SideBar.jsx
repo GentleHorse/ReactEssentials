@@ -45,6 +45,8 @@ export default function SideBar({ onSelect }) {
         <ListButton onClick={() => onSelect("useRef")}>useRef</ListButton>
         <ListButton onClick={() => onSelect("useState")}>useState</ListButton>
         <ListButton onClick={() => onSelect("props")}>props</ListButton>
+        <ListButton onClick={() => onSelect("contextAPI")}>Context API</ListButton>
+        <ListButton onClick={() => onSelect("useReducer")}>useReducer</ListButton>
         <ListButton onClick={() => onSelect("useMemo")}>useMemo</ListButton>
         <ListButton onClick={() => onSelect("builtInReactComponents")}>
           Built-in React component

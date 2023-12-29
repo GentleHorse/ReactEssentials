@@ -5,7 +5,7 @@ import CoreConcepts from "./components/CoreConcepts/CoreConcepts.jsx";
 import Setup from "./components/Setup/Setup.jsx";
 import MouseEvents from "./components/MouseEvents/MouseEvents.jsx";
 import DragEvents from "./components/DragEvents/DragEvents.jsx";
-import StateUseCases from "./components/useState/StateUseCases.jsx";
+import StateUseCases from "./components/useState/UseStateUseCase.jsx";
 import PropsUseCases from "./components/PropsUseCases/PropsUseCases.jsx";
 import UseEffectUseCase from "./components/useEffect/UseEffectUseCase.jsx";
 import BuiltInReactComponents from "./components/BuiltInReactComponents/BuiltInReactComponents.jsx";
@@ -15,71 +15,81 @@ import TailwindCSS from "./components/TailwindCSS/TailwindCSS.jsx";
 import UseMemoUseCase from "./components/useMemo/UseMemoUseCase.jsx";
 import UseRefUseCase from "./components/useRef/UseRefUseCase.jsx";
 import SideBar from "./components/SideBar/SideBar.jsx";
+import ContextAPI from "./components/ContextAPI/ContextAPI.jsx";
+import UseReducerUseCase from "./components/useReducer/UseReducerUseCase.jsx";
 
 function App() {
   const [selectedContent, setSelectedContent] = useState("coreConcept");
 
   const selectContentHandler = (selected) => {
     setSelectedContent(selected);
-  }
+  };
 
   let content;
 
-  switch(selectedContent){
+  switch (selectedContent) {
     case "coreConcept":
-      content = <CoreConcepts />
+      content = <CoreConcepts />;
       break;
-    
+
     case "setup":
-      content = <Setup />
+      content = <Setup />;
       break;
-    
+
     case "useEffect":
-      content = <UseEffectUseCase />
+      content = <UseEffectUseCase />;
       break;
 
     case "useRef":
-      content = <UseRefUseCase />
+      content = <UseRefUseCase />;
       break;
 
     case "useState":
-      content = <StateUseCases />
+      content = <StateUseCases />;
       break;
 
     case "props":
-      content = <PropsUseCases />
+      content = <PropsUseCases />;
+      break;
+
+    case "contextAPI":
+      content = <ContextAPI />;
+      break;
+
+    case "useReducer":
+      content = <UseReducerUseCase />;
       break;
 
     case "useMemo":
-      content = <UseMemoUseCase />
+      content = <UseMemoUseCase />;
       break;
 
     case "builtInReactComponents":
-      content = <BuiltInReactComponents />
+      content = <BuiltInReactComponents />;
       break;
 
     case "CSSStyling":
-      content = <CSSStyling />
+      content = <CSSStyling />;
       break;
 
     case "styledComponents":
-      content = <StyledComponents />
+      content = <StyledComponents />;
       break;
 
     case "tailwindCSS":
-      content = <TailwindCSS />
+      content = <TailwindCSS />;
       break;
 
     case "mouseEvents":
-      content = <MouseEvents />
+      content = <MouseEvents />;
       break;
 
     case "dragEvents":
-      content = <DragEvents />
+      content = <DragEvents />;
       break;
 
     default:
-      content = <p>Oops... no content selected ???</p>
+      content = <p>Oops... no content selected ???</p>;
   }
 
   return (
@@ -87,9 +97,7 @@ function App() {
       <Header />
       <main>
         <SideBar onSelect={selectContentHandler} />
-        <div id="content">
-          {content}
-        </div>
+        <div id="content">{content}</div>
       </main>
     </>
   );

@@ -4,9 +4,9 @@ export default function ListButton({ children, ...props }) {
   const Button = styled.button`
     width: 100%;
     text-align: left;
-    font-size: 0.875rem;
+    font-size: 0.8rem;
     line-height: 1.25rem; 
-    padding: 0.5rem 0.75rem;
+    padding: 0.3rem 0.75rem;
     margin: 0.25rem 0;
     border: none;
     border-radius: 0.5rem;
@@ -18,7 +18,7 @@ export default function ListButton({ children, ...props }) {
     &:hover {
         background: rgba(30, 41, 59, 0.8);
         color: rgb(255 255 255);
-        font-size: 1em;
+        font-size: 0.9em;
     }
   `;
 
