@@ -2,7 +2,7 @@ export const TAILWIND_CSS = {
   installationWithVite: {
     title: "Installation with Vite",
     description:
-      "You need to install Tailwind CSS, configure your template paths and add the Tailwind directives to your CSS.",
+      "You need to install Tailwind CSS, configure your template paths and add the Tailwind directives to your CSS. It iften requires re-initializing the server.",
     code: `
 --->> terminal <<---------------------------------------------------
 
@@ -58,7 +58,7 @@ export default {
   usingCustomFont: {
     title: "Using custom font",
     description:
-      "Set up in tailwind.config.js and use it by adding className 'font-title'.",
+      "Set up in tailwind.config.js by extending fontFamily property. One-word name should be wrapped with single quotation marks and two-words name should be with double quotation marks. Sometimes it requires re-initializing the server.",
     code: `
 --->> tailwind.config.js <<-----------------------------------------
 
@@ -71,7 +71,10 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        title: ['"Pacifico"', 'cursive']
+        'roboto': ['"Roboto"', "sans-serif"],
+        "roboto-condensed": ['"Roboto Condensed"', "sans-serif"],
+        "bricolage-grotesque": ['"Bricolage Grotesque"', "sans-serif"],
+        'raleway': ['"Raleway"', "sans-serif"],
       }
     },
   },
