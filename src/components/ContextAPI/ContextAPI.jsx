@@ -34,19 +34,7 @@ export default function ContextAPI() {
               isSelected={selectedTopic === "createContext"}
               onClick={() => selectHandler("createContext")}
             >
-              createContext
-            </TabButton>
-            <TabButton
-              isSelected={selectedTopic === "someContextProvider"}
-              onClick={() => selectHandler("someContextProvider")}
-            >
-              SomeContext.Provider
-            </TabButton>
-            <TabButton
-              isSelected={selectedTopic === "useContext"}
-              onClick={() => selectHandler("useContext")}
-            >
-              useContext
+              How to use
             </TabButton>
             <TabButton
               isSelected={selectedTopic === "someContextConsumer"}

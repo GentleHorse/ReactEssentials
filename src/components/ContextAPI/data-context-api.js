@@ -1,21 +1,19 @@
 export const CONTEXT_API = {
   createContext: {
-    title: "createContext",
+    title: "How to use",
     description:
-      "Call createContext outside of any components to create a context.",
+      "Call createContext outside of any components to create a context, wrap your components into a context provider to specify the value of this context for all components inside and then call useContext at the top level of your component to read and subscribe to context.",
     code: `
+1) shopping-cart-context.jsx --------------------------------------
+
 import { createContext } from "react";
 
 export const CartContext = createContext({
     items: []
 });
-`,
-  },
-  someContextProvider: {
-    title: "SomeContext.Provider",
-    description:
-      "Wrap your components into a context provider to specify the value of this context for all components inside.",
-    code: `
+
+2) App.jsx --------------------------------------------------------
+
 import { CartContext } from "./store/shopping-cart-context.jsx";
 
 function App() {
@@ -30,19 +28,16 @@ function App() {
     </CartContext.Provider>
   );
 }
-`,
-  },
-  useContext: {
-    title: "useContext",
-    description:
-      "Call useContext at the top level of your component to read and subscribe to context.",
-    code: `
+
+3) Cart.jsx -------------------------------------------------------
+
 import { useContext } from "react";
 import { CartContext } from "../../../store/shopping-cart-context";
 
 ...
   
 const cartCtx = useContext(CartContext);
+
 `,
   },
   someContextConsumer: {
