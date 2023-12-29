@@ -14,9 +14,10 @@ import StyledComponents from "./components/StyledComponents/StyledComponents.jsx
 import TailwindCSS from "./components/TailwindCSS/TailwindCSS.jsx";
 import UseMemoUseCase from "./components/useMemo/UseMemoUseCase.jsx";
 import UseRefUseCase from "./components/useRef/UseRefUseCase.jsx";
-import SideBar from "./components/SideBar/SideBar.jsx";
+import SideBar from "./components/SideBar.jsx";
 import ContextAPI from "./components/ContextAPI/ContextAPI.jsx";
 import UseReducerUseCase from "./components/useReducer/UseReducerUseCase.jsx";
+import UseCallbackUseCase from "./components/useCallback/UseCallbackUseCase.jsx";
 
 function App() {
   const [selectedContent, setSelectedContent] = useState("coreConcept");
@@ -38,6 +39,10 @@ function App() {
 
     case "useEffect":
       content = <UseEffectUseCase />;
+      break;
+
+    case "useCallback":
+      content = <UseCallbackUseCase />;
       break;
 
     case "useRef":

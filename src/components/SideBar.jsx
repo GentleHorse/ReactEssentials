@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-import ListButton from "../utils/ListButton.jsx";
+import ListButton from "./utils/ListButton.jsx";
 
 export default function SideBar({ onSelect }) {
   const Aside = styled.aside`
@@ -42,6 +42,7 @@ export default function SideBar({ onSelect }) {
         <ListButton onClick={() => onSelect("coreConcept")}>Core concept</ListButton>
         <ListButton onClick={() => onSelect("setup")}>Set up</ListButton>
         <ListButton onClick={() => onSelect("useEffect")}>useEffect</ListButton>
+        <ListButton onClick={() => onSelect("useCallback")}>useCallback</ListButton>
         <ListButton onClick={() => onSelect("useRef")}>useRef</ListButton>
         <ListButton onClick={() => onSelect("useState")}>useState</ListButton>
         <ListButton onClick={() => onSelect("props")}>props</ListButton>

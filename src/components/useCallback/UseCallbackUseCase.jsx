@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { USE_MEMO } from "./data-use-memo.js";
+import { USE_CALLBACK } from "./data-use-callback.js";
 import TabButton from "../utils/TabButton.jsx";
 import Section from "../utils/Section.jsx";
 import Tabs from "../utils/Tabs.jsx";
 import TabContent from "../utils/TabContent.jsx";
 
-export default function UseMemoUseCase() {
+export default function UseCallbackUseCase() {
   const [selectedTopic, setSelectedTopic] = useState();
 
   const selectHandler = (selectedButton) => {
@@ -16,17 +16,17 @@ export default function UseMemoUseCase() {
   if (selectedTopic) {
     tabContent = (
       <TabContent>
-        <h3>{USE_MEMO[selectedTopic].title}</h3>
-        <p>{USE_MEMO[selectedTopic].description}</p>
+        <h3>{USE_CALLBACK[selectedTopic].title}</h3>
+        <p>{USE_CALLBACK[selectedTopic].description}</p>
         <pre>
-          <code>{USE_MEMO[selectedTopic].code}</code>
+          <code>{USE_CALLBACK[selectedTopic].code}</code>
         </pre>
       </TabContent>
     );
   }
 
   return (
-    <Section title="useMemo">
+    <Section title="useCallback">
       <Tabs
         buttons={
           <>
