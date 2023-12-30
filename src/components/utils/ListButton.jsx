@@ -14,6 +14,7 @@ export default function ListButton({ children, ...props }) {
     cursor: pointer;
     background: rgba(15, 23, 42, 0.8);
     color: rgb(203 213 225);
+    transition: all 0.2s ease-in-out;
 
     &:hover {
         background: rgba(30, 41, 59, 0.8);

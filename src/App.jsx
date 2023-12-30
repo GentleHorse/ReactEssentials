@@ -18,6 +18,7 @@ import SideBar from "./components/SideBar.jsx";
 import ContextAPI from "./components/ContextAPI/ContextAPI.jsx";
 import UseReducerUseCase from "./components/useReducer/UseReducerUseCase.jsx";
 import UseCallbackUseCase from "./components/useCallback/UseCallbackUseCase.jsx";
+import ReactTips from "./components/ReactTips/ReactTips.jsx";
 
 function App() {
   const [selectedContent, setSelectedContent] = useState("coreConcept");
@@ -91,6 +92,10 @@ function App() {
 
     case "dragEvents":
       content = <DragEvents />;
+      break;
+
+    case "TIPS":
+      content = <ReactTips />;
       break;
 
     default:

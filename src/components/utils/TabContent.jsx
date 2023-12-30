@@ -10,6 +10,7 @@ const TabContentContainer = styled.div`
     #0055ff88,
     #0213ff88
   );
+  backdrop-filter: blur(6px);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
 
   & h3 {
