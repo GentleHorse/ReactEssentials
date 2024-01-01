@@ -19,6 +19,7 @@ import ContextAPI from "./components/ContextAPI/ContextAPI.jsx";
 import UseReducerUseCase from "./components/useReducer/UseReducerUseCase.jsx";
 import UseCallbackUseCase from "./components/useCallback/UseCallbackUseCase.jsx";
 import ReactTips from "./components/ReactTips/ReactTips.jsx";
+import ThreeJsCanvas from "./components/ThreeJsComponents/ThreeJsCanvas.jsx";
 
 function App() {
   const [selectedContent, setSelectedContent] = useState("coreConcept");
@@ -105,6 +106,9 @@ function App() {
   return (
     <>
       <Header />
+
+      <ThreeJsCanvas />
+
       <main>
         <SideBar onSelect={selectContentHandler} />
         <div id="content">{content}</div>
