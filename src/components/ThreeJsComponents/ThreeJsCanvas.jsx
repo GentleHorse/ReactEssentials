@@ -1,9 +1,10 @@
+import { memo } from "react";
 import { styled } from "styled-components";
 import { Canvas } from "@react-three/fiber";
 import { Leva } from "leva";
 import Experience from "./Experience.jsx";
 
-export default function ThreeJsCanvas() {
+const ThreeJsCanvas = memo(function ThreeJsCanvas() {
   const SectionContainer = styled.section`
     position: fixed;
     top: 0;
@@ -30,4 +31,6 @@ export default function ThreeJsCanvas() {
       </Canvas>
     </SectionContainer>
   );
-}
+});
+
+export default ThreeJsCanvas;
