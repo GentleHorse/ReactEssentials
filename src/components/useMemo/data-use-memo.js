@@ -15,4 +15,30 @@ const colors = useMemo(() => {
 }, [clickersCount]);
 `,
   },
+  forComplexCalculations: {
+    title: "Best case scenario: complex calculations",
+    description:
+      "Like memo() for components, useMemo() for functions also costs a performance, but if a function requires complex calculations and you do not want to re-calculate at every render time, it’s the best way to use useMemo().",
+    code: `
+import { useMemo } from "react";
+
+function complexCalculation(number) {
+
+    ...
+    
+    // some complex calculations 
+
+    ...
+    
+}
+
+export default function Counter({ initialCount }) {
+
+  const initialCountIsPrime = useMemo(() => complexCalculation(initialCount), [initialCount]);
+
+  ...
+
+}
+`,
+  },
 };

@@ -24,4 +24,18 @@ export default function Quiz() {
 }
 `,
   },
+  preventingUnnecessaryRendering: {
+    title: "Preventing unnecessary rendering",
+    description:
+    "Using memo() enables to prevent unnecessary child components rendering when the parent component renders because memo() lets you skip re-rendering a component when its props are unchanged by comparing old props with current props. But DO NOT OVERUSE memo() and use it AS HIGH UP IN THE COMPONENT TREE AS POSSIBLE because checking props with memo() costs a performance. Therefore, do not use it on components where props will change frequently.",
+    code: `
+import { memo } from 'react';
+
+const SomeComponent = memo(function SomeComponent(props) {
+  // ...
+});
+
+export default SomeComponent;
+`,
+  },
 };

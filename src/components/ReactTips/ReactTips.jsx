@@ -36,6 +36,12 @@ export default function ReactTips() {
             >
               Syncronise components
             </TabButton>
+            <TabButton
+              isSelected={selectedTopic === "preventingUnnecessaryRendering"}
+              onClick={() => selectHandler("preventingUnnecessaryRendering")}
+            >
+              Preventing unnecessary rendering
+            </TabButton>
           </>
         }
       >

@@ -36,6 +36,12 @@ export default function UseMemoUseCase() {
             >
               What is it?
             </TabButton>
+            <TabButton
+              isSelected={selectedTopic === "forComplexCalculations"}
+              onClick={() => selectHandler("forComplexCalculations")}
+            >
+              For complex calculations
+            </TabButton>
           </>
         }
       >

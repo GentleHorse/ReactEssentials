@@ -36,6 +36,12 @@ export default function UseCallbackUseCase() {
             >
               What is it?
             </TabButton>
+            <TabButton
+              isSelected={selectedTopic === "useWithMemo"}
+              onClick={() => selectHandler("useWithMemo")}
+            >
+              Use with memo()
+            </TabButton>
           </>
         }
       >
