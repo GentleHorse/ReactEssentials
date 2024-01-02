@@ -6,7 +6,7 @@ export default function SideBar({ onSelect }) {
   const Aside = styled.aside`
     width: 20rem;
     height: 48.5rem;
-    padding: 1.5rem 2rem;
+    padding: 0.5rem 2rem 1rem 2rem;
     margin-left: 2rem;
     background: linear-gradient(
       -90deg,
@@ -23,7 +23,8 @@ export default function SideBar({ onSelect }) {
   `;
 
   const Header = styled.h2`
-    margin-bottom: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
     font-weight: 700;
     text-transform: uppercase;
     color: rgb(231 229 228);
@@ -58,6 +59,8 @@ export default function SideBar({ onSelect }) {
         <ListButton onClick={() => onSelect("mouseEvents")}>Mouse evenets</ListButton>
         <ListButton onClick={() => onSelect("dragEvents")}>Drag events</ListButton>
         <ListButton onClick={() => onSelect("TIPS")}>TIPS</ListButton>
+        <ListButton onClick={() => onSelect("classBasedComponents")}>Class based components</ListButton>
+
       </ListContainer>
     </Aside>
   );

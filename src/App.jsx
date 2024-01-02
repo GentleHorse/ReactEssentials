@@ -20,6 +20,7 @@ import UseReducerUseCase from "./components/useReducer/UseReducerUseCase.jsx";
 import UseCallbackUseCase from "./components/useCallback/UseCallbackUseCase.jsx";
 import ReactTips from "./components/ReactTips/ReactTips.jsx";
 import ThreeJsCanvas from "./components/ThreeJsComponents/ThreeJsCanvas.jsx";
+import ClassBasedComponents from "./components/ClassBasedComponents/ClassBasedComponents.jsx";
 
 function App() {
   const [selectedContent, setSelectedContent] = useState("coreConcept");
@@ -97,6 +98,10 @@ function App() {
 
     case "TIPS":
       content = <ReactTips />;
+      break;
+
+    case "classBasedComponents":
+      content = <ClassBasedComponents />;
       break;
 
     default:
