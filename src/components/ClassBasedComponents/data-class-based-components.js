@@ -137,4 +137,93 @@ useEffect(() => {
   }, [searchTerm]);
 `,
   },
+  contextAPI: {
+    title: "Context API",
+    description:
+      "With class based components, you can still use createContext() to create a context and wrap around child components with SomeContext.Provider to enable them to use the context, however you cannot use useContext() inside child components. Instead you need to define the context with “static contextType = SomeContext”. Then you can access the context value by “this.contex.someValue”.",
+    code: `
+import { createContext } from "react";
+
+const UsersContext = createContext({
+  users: [],
+});
+
+export default UsersContext;
+
+---------------------------------------
+
+const usersContext = { ... }
+
+...
+
+<UsersContext.Provider value={usersContext}>
+    <UserFinder />
+</UsersContext.Provider>
+
+---------------------------------------
+
+class UserFinder extends Component {
+
+  static contextType = UsersContext;
+  
+  constructor() { ... }
+  
+  
+  componentDidMount() {
+  
+    this.setState({ filteredUsers: this.context.users });
+  }
+  
+  
+  render() {
+    return (
+      <>
+        <div>
+          <input type="search" />
+        </div>
+        <Users />
+      </>
+    );
+  }
+}
+
+export default UserFinder;
+`,
+  },
+  errorBoundary: {
+    title: "Error boundary",
+    description:
+      "Error boundaries are React components that catch JavaScript errors anywhere in their child component tree, log those errors, and display a fallback UI instead of the component tree that crashed. Error boundaries catch errors during rendering, in lifecycle methods, and in constructors of the whole tree below them.",
+    code: `
+import { Component } from "react";
+
+class ErrorBoundary extends Component {
+  constructor() {
+    super();
+    this.state = { hasError: false };
+  }
+
+  componentDidCatch(error) {
+    console.log(error)
+    this.setState({ hasError: true });
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return <p>Something went wrong!</p>;
+    }
+
+    return this.props.children;
+  }
+}
+
+export default ErrorBoundary;
+
+------------------------------------------
+
+<ErrorBoundary>
+  <Users />
+</ErrorBoundary>
+`,
+  },
 }

@@ -48,6 +48,18 @@ export default function ClassBasedComponents() {
             >
               Side effects
             </TabButton>
+            <TabButton
+              isSelected={selectedTopic === "contextAPI"}
+              onClick={() => selectHandler("contextAPI")}
+            >
+              Context API
+            </TabButton>
+            <TabButton
+              isSelected={selectedTopic === "errorBoundary"}
+              onClick={() => selectHandler("errorBoundary")}
+            >
+              Error boundary
+            </TabButton>
           </>
         }
       >
