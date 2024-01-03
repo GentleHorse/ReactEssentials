@@ -19,22 +19,25 @@ const PlaneMaterial = shaderMaterial(
 extend({ PlaneMaterial });
 
 export default function Experience() {
+  const planeRef = useRef();
   const planeMaterialRef = useRef();
+
+  useFrame((state, delta) => planeRef.current.rotation.y = Math.PI * Math.sin(state.clock.getElapsedTime() * 0.5) * 0.08);
   useFrame((state, delta) => (planeMaterialRef.current.uTime = state.clock.getElapsedTime()));
 
   return (
     <>
       <color args={["#030202"]} attach="background" />
 
-      {/* <Perf position="top-left" /> */}
+      {/* <Perf position="top-left" /> */}1
 
       <OrbitControls makeDefault />
 
       <directionalLight position={[1, 2, 3]} intensity={4.5} />
       <ambientLight intensity={1.5} />
 
-      <mesh position={[0, 0, 0]} scale={10}>
-        <planeGeometry />
+      <mesh ref={planeRef} position={[0, 0, 0]} scale={10}>
+        <planeGeometry args={[2, 1]} />
         <planeMaterial ref={planeMaterialRef} />
       </mesh>
     </>
