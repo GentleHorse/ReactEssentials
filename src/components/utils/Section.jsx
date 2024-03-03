@@ -1,11 +1,11 @@
 import { styled } from "styled-components";
 
 export default function Section({ title, children, ...props }) {
-  const SectionContainer = styled.section`
-    margin: 3rem auto;
-    
+  const SectionContainer = styled.section`    
     & h2 {
+      margin: 0 0 2rem 0;
       text-align: left;
+      font-size: 4rem;
       color: #25d325;
     }
     

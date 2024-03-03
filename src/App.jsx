@@ -110,13 +110,17 @@ function App() {
 
   return (
     <>
-      <Header />
-
       <ThreeJsCanvas />
 
       <main>
-        <SideBar onSelect={selectContentHandler} />
-        <div id="content">{content}</div>
+        <SideBar
+          onSelect={selectContentHandler}
+          selectedContent={selectedContent}
+        />
+        <div>
+          {/* <Header /> */}
+          <div id="content">{content}</div>
+        </div>
       </main>
     </>
   );
