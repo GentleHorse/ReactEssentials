@@ -43,8 +43,8 @@ export default function Experience() {
       <directionalLight position={[1, 2, 3]} intensity={4.5} />
       <ambientLight intensity={1.5} />
 
-      <mesh ref={planeRef} position={[0, 0, 0]} scale={3.1}>
-        <sphereGeometry />
+      <mesh ref={planeRef} position={[0, 0, 0]} scale={3}>
+        <sphereGeometry args={[1, 64, 32]} />
         <MeshTransmissionMaterial
             color="lightsteelblue"
             transmissionSampler
@@ -53,6 +53,7 @@ export default function Experience() {
             backsideThickness={0.2}
             chromaticAberration={0.1}
             distortion={0.4}
+            resolution={1024}
           />
       </mesh>
 
