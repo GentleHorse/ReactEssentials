@@ -22,6 +22,8 @@ export default function Experience() {
   const planeRef = useRef();
   const planeMaterialRef = useRef();
 
+  const sphereRef = useRef();
+
   useFrame(
     (state, delta) =>
       (planeRef.current.rotation.y =
@@ -32,19 +34,24 @@ export default function Experience() {
       (planeMaterialRef.current.uTime = state.clock.getElapsedTime())
   );
 
+  useFrame((state, delta) => {
+    sphereRef.current.rotation.x += delta * 0.10;
+    sphereRef.current.rotation.y += delta * 0.15;
+  })
+
   return (
     <>
       <color args={["#030202"]} attach="background" />
 
-      {/* <Perf position="top-left" /> */}
+      <Perf position="top-left" />
 
       <OrbitControls makeDefault />
 
       <directionalLight position={[1, 2, 3]} intensity={4.5} />
       <ambientLight intensity={1.5} />
 
-      <mesh ref={planeRef} position={[0, 0, 0]} scale={3}>
-        <sphereGeometry args={[1, 64, 32]} />
+      <mesh ref={sphereRef} position={[0, 0, 0]} scale={3}>
+        <sphereGeometry args={[1, 4, 2]} />
         <MeshTransmissionMaterial
             color="lightsteelblue"
             transmissionSampler
