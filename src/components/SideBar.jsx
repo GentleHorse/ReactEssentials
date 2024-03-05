@@ -4,7 +4,7 @@ import ListButton from "./utils/ListButton.jsx";
 
 export default function SideBar({ onSelect, selectedContent }) {
   const Aside = styled.aside`
-    width: 20rem;
+    width: 13rem;
     height: auto;
     padding: 2rem 0.5rem 2rem 1rem;
     margin-left: 0;
@@ -196,6 +196,18 @@ export default function SideBar({ onSelect, selectedContent }) {
           }}
         >
           classBasedComponents
+        </ListButton>
+
+        <ListButton
+          onClick={() => onSelect("errorHandling")}
+          style={{
+            color:
+              selectedContent === "errorHandling"
+                ? "#FCFAF2"
+                : "#FCFAF265",
+          }}
+        >
+          error handling
         </ListButton>
       </ListContainer>
     </Aside>

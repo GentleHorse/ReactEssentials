@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-import Header from "./components/Header/Header.jsx";
 import CoreConcepts from "./components/CoreConcepts/CoreConcepts.jsx";
 import Setup from "./components/Setup/Setup.jsx";
 import MouseEvents from "./components/MouseEvents/MouseEvents.jsx";
@@ -21,6 +20,7 @@ import UseCallbackUseCase from "./components/useCallback/UseCallbackUseCase.jsx"
 import ReactTips from "./components/ReactTips/ReactTips.jsx";
 import ThreeJsCanvas from "./components/ThreeJsComponents/ThreeJsCanvas.jsx";
 import ClassBasedComponents from "./components/ClassBasedComponents/ClassBasedComponents.jsx";
+import ErrorHandling from "./components/ErrorHandling/ErrorHandling.jsx";
 
 function App() {
   const [selectedContent, setSelectedContent] = useState("coreConcept");
@@ -104,6 +104,10 @@ function App() {
       content = <ClassBasedComponents />;
       break;
 
+    case "errorHandling":
+      content = <ErrorHandling />;
+      break;
+
     default:
       content = <p>Oops... no content selected ???</p>;
   }
@@ -118,7 +122,6 @@ function App() {
           selectedContent={selectedContent}
         />
         <div>
-          {/* <Header /> */}
           <div id="content">{content}</div>
         </div>
       </main>

@@ -45,12 +45,12 @@ export default function Experience() {
 
       {/* <Perf position="top-left" /> */}
 
-      <OrbitControls makeDefault />
+      {/* <OrbitControls makeDefault /> */}
 
       <directionalLight position={[1, 2, 3]} intensity={4.5} />
       <ambientLight intensity={1.5} />
 
-      <mesh ref={sphereRef} position={[0, 0, 0]} scale={3}>
+      <mesh ref={sphereRef} position={[0, 0, 1]} scale={3}>
         <sphereGeometry args={[1, 4, 2]} />
         <MeshTransmissionMaterial
             color="lightsteelblue"
@@ -64,7 +64,7 @@ export default function Experience() {
           />
       </mesh>
 
-      <mesh ref={planeRef} position={[0, 0, -1]} scale={10}>
+      <mesh ref={planeRef} position={[0, 0, -1]} scale={15}>
         <planeGeometry args={[2, 1]} />
         <planeMaterial ref={planeMaterialRef} />
       </mesh>

@@ -5,7 +5,7 @@ export default function Section({ title, children, ...props }) {
     & h2 {
       margin: 0 0 2rem 0;
       text-align: left;
-      font-size: 4rem;
+      font-size: 3rem;
       color: #25d325;
     }
     
