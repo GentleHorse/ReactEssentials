@@ -207,8 +207,22 @@ export default function SideBar({ onSelect, selectedContent }) {
                 : "#FCFAF265",
           }}
         >
-          error handling
+          Error handling
         </ListButton>
+
+        <ListButton
+          onClick={() => onSelect("customHooks")}
+          style={{
+            color:
+              selectedContent === "customHooks"
+                ? "#FCFAF2"
+                : "#FCFAF265",
+          }}
+        >
+          Custom hooks
+        </ListButton>
+
+
       </ListContainer>
     </Aside>
   );
