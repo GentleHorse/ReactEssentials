@@ -222,6 +222,18 @@ export default function SideBar({ onSelect, selectedContent }) {
           Custom hooks
         </ListButton>
 
+        <ListButton
+          onClick={() => onSelect("formsAndUserInputs")}
+          style={{
+            color:
+              selectedContent === "formsAndUserInputs"
+                ? "#FCFAF2"
+                : "#FCFAF265",
+          }}
+        >
+          Forms and user inputs
+        </ListButton>
+
 
       </ListContainer>
     </Aside>

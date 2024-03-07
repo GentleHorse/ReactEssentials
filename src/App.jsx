@@ -22,6 +22,7 @@ import ThreeJsCanvas from "./components/ThreeJsComponents/ThreeJsCanvas.jsx";
 import ClassBasedComponents from "./components/ClassBasedComponents/ClassBasedComponents.jsx";
 import ErrorHandling from "./components/ErrorHandling/ErrorHandling.jsx";
 import CustomHooks from "./components/CustomHooks/CustomHooks.jsx";
+import FormsAndUserInputs from "./components/FormsAndUserInputs/FormsAndUserInputs.jsx";
 
 function App() {
   const [selectedContent, setSelectedContent] = useState("coreConcept");
@@ -111,6 +112,10 @@ function App() {
 
     case "customHooks":
       content = <CustomHooks />;
+      break;
+
+    case "formsAndUserInputs":
+      content = <FormsAndUserInputs />;
       break;
 
     default:
