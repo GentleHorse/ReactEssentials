@@ -202,9 +202,7 @@ export default function SideBar({ onSelect, selectedContent }) {
           onClick={() => onSelect("errorHandling")}
           style={{
             color:
-              selectedContent === "errorHandling"
-                ? "#FCFAF2"
-                : "#FCFAF265",
+              selectedContent === "errorHandling" ? "#FCFAF2" : "#FCFAF265",
           }}
         >
           Error handling
@@ -213,10 +211,7 @@ export default function SideBar({ onSelect, selectedContent }) {
         <ListButton
           onClick={() => onSelect("customHooks")}
           style={{
-            color:
-              selectedContent === "customHooks"
-                ? "#FCFAF2"
-                : "#FCFAF265",
+            color: selectedContent === "customHooks" ? "#FCFAF2" : "#FCFAF265",
           }}
         >
           Custom hooks
@@ -234,7 +229,17 @@ export default function SideBar({ onSelect, selectedContent }) {
           Forms and user inputs
         </ListButton>
 
-
+        <ListButton
+          onClick={() => onSelect("resetUserInputs")}
+          style={{
+            color:
+              selectedContent === "resetUserInputs"
+                ? "#FCFAF2"
+                : "#FCFAF265",
+          }}
+        >
+          Reset user inputs
+        </ListButton>
       </ListContainer>
     </Aside>
   );

@@ -23,6 +23,7 @@ import ClassBasedComponents from "./components/ClassBasedComponents/ClassBasedCo
 import ErrorHandling from "./components/ErrorHandling/ErrorHandling.jsx";
 import CustomHooks from "./components/CustomHooks/CustomHooks.jsx";
 import FormsAndUserInputs from "./components/FormsAndUserInputs/FormsAndUserInputs.jsx";
+import ResetUserInputs from "./components/ResetUserInputs/ResetUserInputs.jsx";
 
 function App() {
   const [selectedContent, setSelectedContent] = useState("coreConcept");
@@ -116,6 +117,10 @@ function App() {
 
     case "formsAndUserInputs":
       content = <FormsAndUserInputs />;
+      break;
+
+    case "resetUserInputs":
+      content = <ResetUserInputs />;
       break;
 
     default:
