@@ -26,7 +26,7 @@ export default function FormsAndUserInputs() {
   }
 
   return (
-    <Section title="Forms and user inputs">
+    <Section title="Forms and User Inputs">
       <Tabs
         buttons={
           <>

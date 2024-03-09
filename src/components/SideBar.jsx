@@ -240,6 +240,19 @@ export default function SideBar({ onSelect, selectedContent }) {
         >
           Reset user inputs
         </ListButton>
+
+        <ListButton
+          onClick={() => onSelect("inputValidation")}
+          style={{
+            color:
+              selectedContent === "inputValidation"
+                ? "#FCFAF2"
+                : "#FCFAF265",
+          }}
+        >
+          Input validation
+        </ListButton>
+
       </ListContainer>
     </Aside>
   );
