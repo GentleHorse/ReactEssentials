@@ -48,6 +48,18 @@ export default function InputValidation() {
             >
               Validate on submit
             </TabButton>
+            <TabButton
+              isSelected={selectedTopic === "builtInProps"}
+              onClick={() => selectHandler("builtInProps")}
+            >
+              Validate via built-in props
+            </TabButton>
+            <TabButton
+              isSelected={selectedTopic === "passwordMatchLogic"}
+              onClick={() => selectHandler("passwordMatchLogic")}
+            >
+              Password match logic
+            </TabButton>
           </>
         }
       >
