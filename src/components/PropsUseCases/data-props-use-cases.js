@@ -307,4 +307,48 @@ export default function Button({children, mode="filled", Icon, ...props}) {
 
 `,
   },
+  getherExtraProps: {
+    title: "Gather extra props",
+    description:
+      "If you want to pass many props to children components, sometime it's cumbersome to write all props. Instead you can use '…props' to gather and distribute props properly.",
+      code: `
+/**
+ * WRITE ALL PROPS
+ */
+export default function Input({ id }) {
+  return (
+    <div .... >
+      <label ...> .... </label>
+      <input 
+        id={id}
+        type="email"
+        name="email"
+        onBlur={() => handleInputBlur("email")}
+        onChange={(event) => handleInputChange("email", event.target.value)}
+        value={enteredValues.email} 
+        />
+      
+      ...
+      
+    </div>
+  );
+}
+
+/**
+ * WRITE IN DISTRUCTURING WAY
+ */
+export default function Input({ id, ...props }) {
+  return (
+    <div .... >
+      <label ...> .... </label>
+      <input id={id} {...props} />
+      
+      ...
+      
+    </div>
+  );
+}
+      
+`,
+  },
 }

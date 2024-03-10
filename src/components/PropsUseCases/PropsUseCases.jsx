@@ -60,6 +60,12 @@ export default function PropsUseCases() {
               >
                 Dynamically change className
               </TabButton>
+              <TabButton
+                isSelected={selectedTopic === "getherExtraProps"}
+                onClick={() => selectHandler("getherExtraProps")}
+              >
+                Gather extra props
+              </TabButton>
             </>
           }
         >
