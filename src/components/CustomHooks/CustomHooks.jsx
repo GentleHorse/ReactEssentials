@@ -36,6 +36,12 @@ export default function CustomHooks() {
             >
               With HTTP requests
             </TabButton>
+            <TabButton
+              isSelected={selectedTopic === "forUserInputManagement"}
+              onClick={() => selectHandler("forUserInputManagement")}
+            >
+              For user input management
+            </TabButton>
           </>
         }
       >

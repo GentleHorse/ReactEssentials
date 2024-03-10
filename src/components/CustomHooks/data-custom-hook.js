@@ -58,4 +58,54 @@ const {
 } = useFetch(fetchUserPlaces, []);    
   `,
   },
+  forUserInputManagement: {
+    title: "For user input management",
+    description:
+      "Managing user inputs is more or less similar to any cases, its logics are quite same, and it requires to keep tracks of user inputs with useState().  Thus, it's a nice case for creating a custom hook for that. ",
+    code: `
+import { useState } from "react";
+
+export default function useInput(initialValue, validationFn) {
+  /**
+   * State - managing user input
+   */
+  const [enteredValue, setEnteredValue] = useState(initialValue);
+
+  /**
+   * State - tracking editing input
+   */
+  const [didEdit, setDidEdit] = useState(false);
+
+  /**
+   * Validation logic
+   */
+  const valueIsValid = validationFn(enteredValue);
+
+  /**
+   * Handler - tracking input changes
+   */
+  function handleInputChange(event) {
+    setEnteredValue(event.target.value);
+    setDidEdit(false); // Reset editing state
+  }
+
+  /**
+   * Handler - tracking focus or out of focus
+   */
+  function handleInputBlur() {
+    setDidEdit(true);
+  }
+
+  /**
+   * EXPOSE VALUES, FUNCTIONS
+   */
+  return {
+    value: enteredValue,
+    handleInputChange,
+    handleInputBlur,
+    hasError: didEdit && !valueIsValid,
+  };
+}
+  `,
+  },
 };
