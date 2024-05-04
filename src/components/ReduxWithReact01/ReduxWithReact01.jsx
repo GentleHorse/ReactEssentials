@@ -26,7 +26,7 @@ export default function ReduxWithReact01() {
   }
 
   return (
-    <Section title="Redux Intro">
+    <Section title="Redux with React - 1">
       <Tabs
         buttons={
           <>
