@@ -25,6 +25,8 @@ import CustomHooks from "./components/CustomHooks/CustomHooks.jsx";
 import FormsAndUserInputs from "./components/FormsAndUserInputs/FormsAndUserInputs.jsx";
 import ResetUserInputs from "./components/ResetUserInputs/ResetUserInputs.jsx";
 import InputValidation from "./components/InputValidation/InputValidation.jsx";
+import ReduxIntro from "./components/ReduxIntro/ReduxIntro.jsx";
+import ReduxWithReact01 from "./components/ReduxWithReact01/ReduxWithReact01.jsx";
 
 function App() {
   const [selectedContent, setSelectedContent] = useState("coreConcept");
@@ -126,6 +128,14 @@ function App() {
 
     case "inputValidation":
       content = <InputValidation />;
+      break;
+
+    case "reduxIntro":
+      content = <ReduxIntro />;
+      break;
+
+    case "reduxWithReact01":
+      content = <ReduxWithReact01 />;
       break;
 
     default:

@@ -253,6 +253,30 @@ export default function SideBar({ onSelect, selectedContent }) {
           Input validation
         </ListButton>
 
+        <ListButton
+          onClick={() => onSelect("reduxIntro")}
+          style={{
+            color:
+              selectedContent === "reduxIntro"
+                ? "#FCFAF2"
+                : "#FCFAF265",
+          }}
+        >
+          Redux intro
+        </ListButton>
+
+        <ListButton
+          onClick={() => onSelect("reduxWithReact01")}
+          style={{
+            color:
+              selectedContent === "reduxWithReact01"
+                ? "#FCFAF2"
+                : "#FCFAF265",
+          }}
+        >
+          Redux with React - 1
+        </ListButton>
+
       </ListContainer>
     </Aside>
   );
