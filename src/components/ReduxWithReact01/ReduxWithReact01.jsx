@@ -48,6 +48,24 @@ export default function ReduxWithReact01() {
             >
               Providing the store
             </TabButton>
+            <TabButton
+              isSelected={selectedTopic === "useTheStore"}
+              onClick={() => selectHandler("useTheStore")}
+            >
+              Use the store
+            </TabButton>
+            <TabButton
+              isSelected={selectedTopic === "dispatchActions"}
+              onClick={() => selectHandler("dispatchActions")}
+            >
+              Dispatch actions (useDispatch)
+            </TabButton>
+            <TabButton
+              isSelected={selectedTopic === "reduxWithClassBasedComponent"}
+              onClick={() => selectHandler("reduxWithClassBasedComponent")}
+            >
+              Redux with class-based component
+            </TabButton>
           </>
         }
       >
