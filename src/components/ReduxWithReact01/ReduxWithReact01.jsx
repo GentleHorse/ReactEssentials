@@ -58,7 +58,7 @@ export default function ReduxWithReact01() {
               isSelected={selectedTopic === "dispatchActions"}
               onClick={() => selectHandler("dispatchActions")}
             >
-              Dispatch actions (useDispatch)
+              Dispatch actions
             </TabButton>
             <TabButton
               isSelected={selectedTopic === "reduxWithClassBasedComponent"}

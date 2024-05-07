@@ -277,6 +277,30 @@ export default function SideBar({ onSelect, selectedContent }) {
           Redux with React - 1
         </ListButton>
 
+        <ListButton
+          onClick={() => onSelect("reduxWithReact02")}
+          style={{
+            color:
+              selectedContent === "reduxWithReact02"
+                ? "#FCFAF2"
+                : "#FCFAF265",
+          }}
+        >
+          Redux with React - 2
+        </ListButton>
+
+        <ListButton
+          onClick={() => onSelect("reduxToolkit")}
+          style={{
+            color:
+              selectedContent === "reduxToolkit"
+                ? "#FCFAF2"
+                : "#FCFAF265",
+          }}
+        >
+          Redux Toolkit
+        </ListButton>
+
       </ListContainer>
     </Aside>
   );
