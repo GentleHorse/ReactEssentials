@@ -5,6 +5,7 @@ export const REDUX_TOOLKIT = {
       "You need to install extra package for using Redux Toolkit.",
     code: `
 npm install @reduxjs/toolkit
+npm install react-redux
   `,
   },
   addingStateSlices: {
@@ -50,6 +51,27 @@ const counterSlice = createSlice({
 const store = configureStore({
   reducer: counterSlice.reducer,
 });
+  `,
+  },
+  providingTheStore: {
+    title: "Providing the store",
+    description:
+      "In order to use the store, you need to provided it at the highest level.",
+    code: `
+import React from "react";
+import ReactDOM from "react-dom/client";
+import { Provider } from "react-redux";
+
+import "./index.css";
+import App from "./App";
+import store from "./store/index.js";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+  <Provider store={store}>
+    <App />
+  </Provider>
+);
   `,
   },
   actionObjects: {

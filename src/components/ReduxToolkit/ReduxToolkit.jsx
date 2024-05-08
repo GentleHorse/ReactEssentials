@@ -49,6 +49,12 @@ export default function ReduxToolkit() {
               Connecting Redux Toolkit State
             </TabButton>
             <TabButton
+              isSelected={selectedTopic === "providingTheStore"}
+              onClick={() => selectHandler("providingTheStore")}
+            >
+              Providing the store
+            </TabButton>
+            <TabButton
               isSelected={selectedTopic === "actionObjects"}
               onClick={() => selectHandler("actionObjects")}
             >
