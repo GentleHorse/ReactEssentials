@@ -29,6 +29,7 @@ import ReduxIntro from "./components/ReduxIntro/ReduxIntro.jsx";
 import ReduxWithReact01 from "./components/ReduxWithReact01/ReduxWithReact01.jsx";
 import ReduxWithReact02 from "./components/ReduxWithReact02/ReduxWithReact02.jsx";
 import ReduxToolkit from "./components/ReduxToolkit/ReduxToolkit.jsx";
+import ReduxAdvanced from "./components/ReduxAdvanced/ReduxAdvanced.jsx";
 
 function App() {
   const [selectedContent, setSelectedContent] = useState("coreConcept");
@@ -146,6 +147,10 @@ function App() {
 
     case "reduxToolkit":
       content = <ReduxToolkit />;
+      break;
+
+    case "reduxAdvanced":
+      content = <ReduxAdvanced />;
       break;
 
     default:

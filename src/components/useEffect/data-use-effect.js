@@ -107,4 +107,29 @@ function Clicker() {
 export default Clicker;
 `,
   },
+  useEffectE: {
+    title: "Not execute at the intial render",
+    description:
+      "If you don’t want to run the code at the initial render, define the “isInitial” flag outside the component and use it to prevent the code from being executed.",
+    code: `
+let isInitial = true;
+
+export default function SomeComponent() {
+
+  useEffect(() => {
+  
+    if (isInitial){
+      isInitial = false;
+      return;
+    }
+  
+    // ---- some code to execute -----
+  
+  }, [a, b])
+  
+  ....
+
+}
+`,
+  },
 };

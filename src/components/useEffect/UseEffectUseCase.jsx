@@ -54,6 +54,12 @@ export default function UseEffectUseCase() {
             >
               Store in localStorage
             </TabButton>
+            <TabButton
+              isSelected={selectedTopic === "useEffectE"}
+              onClick={() => selectHandler("useEffectE")}
+            >
+              Not execute at the intial render
+            </TabButton>
           </>
         }
       >

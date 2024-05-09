@@ -5,7 +5,7 @@ import ListButton from "./utils/ListButton.jsx";
 export default function SideBar({ onSelect, selectedContent }) {
   const Aside = styled.aside`
     width: 13rem;
-    height: auto;
+    height: 200vh;
     padding: 2rem 0.5rem 2rem 1rem;
     margin-left: 0;
     background: linear-gradient(
@@ -299,6 +299,18 @@ export default function SideBar({ onSelect, selectedContent }) {
           }}
         >
           Redux Toolkit
+        </ListButton>
+
+        <ListButton
+          onClick={() => onSelect("reduxAdvanced")}
+          style={{
+            color:
+              selectedContent === "reduxAdvanced"
+                ? "#FCFAF2"
+                : "#FCFAF265",
+          }}
+        >
+          Redux advanced
         </ListButton>
 
       </ListContainer>
