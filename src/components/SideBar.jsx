@@ -233,9 +233,7 @@ export default function SideBar({ onSelect, selectedContent }) {
           onClick={() => onSelect("resetUserInputs")}
           style={{
             color:
-              selectedContent === "resetUserInputs"
-                ? "#FCFAF2"
-                : "#FCFAF265",
+              selectedContent === "resetUserInputs" ? "#FCFAF2" : "#FCFAF265",
           }}
         >
           Reset user inputs
@@ -245,9 +243,7 @@ export default function SideBar({ onSelect, selectedContent }) {
           onClick={() => onSelect("inputValidation")}
           style={{
             color:
-              selectedContent === "inputValidation"
-                ? "#FCFAF2"
-                : "#FCFAF265",
+              selectedContent === "inputValidation" ? "#FCFAF2" : "#FCFAF265",
           }}
         >
           Input validation
@@ -256,10 +252,7 @@ export default function SideBar({ onSelect, selectedContent }) {
         <ListButton
           onClick={() => onSelect("reduxIntro")}
           style={{
-            color:
-              selectedContent === "reduxIntro"
-                ? "#FCFAF2"
-                : "#FCFAF265",
+            color: selectedContent === "reduxIntro" ? "#FCFAF2" : "#FCFAF265",
           }}
         >
           Redux intro
@@ -269,9 +262,7 @@ export default function SideBar({ onSelect, selectedContent }) {
           onClick={() => onSelect("reduxWithReact01")}
           style={{
             color:
-              selectedContent === "reduxWithReact01"
-                ? "#FCFAF2"
-                : "#FCFAF265",
+              selectedContent === "reduxWithReact01" ? "#FCFAF2" : "#FCFAF265",
           }}
         >
           Redux with React - 1
@@ -281,9 +272,7 @@ export default function SideBar({ onSelect, selectedContent }) {
           onClick={() => onSelect("reduxWithReact02")}
           style={{
             color:
-              selectedContent === "reduxWithReact02"
-                ? "#FCFAF2"
-                : "#FCFAF265",
+              selectedContent === "reduxWithReact02" ? "#FCFAF2" : "#FCFAF265",
           }}
         >
           Redux with React - 2
@@ -292,10 +281,7 @@ export default function SideBar({ onSelect, selectedContent }) {
         <ListButton
           onClick={() => onSelect("reduxToolkit")}
           style={{
-            color:
-              selectedContent === "reduxToolkit"
-                ? "#FCFAF2"
-                : "#FCFAF265",
+            color: selectedContent === "reduxToolkit" ? "#FCFAF2" : "#FCFAF265",
           }}
         >
           Redux Toolkit
@@ -305,12 +291,40 @@ export default function SideBar({ onSelect, selectedContent }) {
           onClick={() => onSelect("reduxAdvanced")}
           style={{
             color:
-              selectedContent === "reduxAdvanced"
-                ? "#FCFAF2"
-                : "#FCFAF265",
+              selectedContent === "reduxAdvanced" ? "#FCFAF2" : "#FCFAF265",
           }}
         >
           Redux advanced
+        </ListButton>
+
+        <ListButton
+          onClick={() => onSelect("reactRouter01")}
+          style={{
+            color:
+              selectedContent === "reactRouter01" ? "#FCFAF2" : "#FCFAF265",
+          }}
+        >
+          React Router - 1
+        </ListButton>
+
+        <ListButton
+          onClick={() => onSelect("reactRouter02")}
+          style={{
+            color:
+              selectedContent === "reactRouter02" ? "#FCFAF2" : "#FCFAF265",
+          }}
+        >
+          React Router - 2
+        </ListButton>
+
+        <ListButton
+          onClick={() => onSelect("reactRouter03")}
+          style={{
+            color:
+              selectedContent === "reactRouter03" ? "#FCFAF2" : "#FCFAF265",
+          }}
+        >
+          React Router - 3
         </ListButton>
 
       </ListContainer>

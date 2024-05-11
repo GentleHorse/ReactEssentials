@@ -30,6 +30,9 @@ import ReduxWithReact01 from "./components/ReduxWithReact01/ReduxWithReact01.jsx
 import ReduxWithReact02 from "./components/ReduxWithReact02/ReduxWithReact02.jsx";
 import ReduxToolkit from "./components/ReduxToolkit/ReduxToolkit.jsx";
 import ReduxAdvanced from "./components/ReduxAdvanced/ReduxAdvanced.jsx";
+import ReactRouter01 from "./components/ReactRouter01/ReactRouter01.jsx";
+import ReactRouter02 from "./components/ReactRouter02/ReactRouter02.jsx";
+import ReactRouter03 from "./components/ReactRouter03/ReactRouter03.jsx";
 
 function App() {
   const [selectedContent, setSelectedContent] = useState("coreConcept");
@@ -151,6 +154,18 @@ function App() {
 
     case "reduxAdvanced":
       content = <ReduxAdvanced />;
+      break;
+
+    case "reactRouter01":
+      content = <ReactRouter01 />;
+      break;
+
+    case "reactRouter02":
+      content = <ReactRouter02 />;
+      break;
+
+    case "reactRouter03":
+      content = <ReactRouter03 />;
       break;
 
     default:
