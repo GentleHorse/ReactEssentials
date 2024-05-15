@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 
 const TabContentContainer = styled.div`
   padding: 3.5rem;
+  margin-top: 3.2rem;
   border-radius: 6px;
   width: 70vw;
   background: linear-gradient(

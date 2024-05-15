@@ -327,6 +327,46 @@ export default function SideBar({ onSelect, selectedContent }) {
           React Router - 3
         </ListButton>
 
+        <ListButton
+          onClick={() => onSelect("reactRouter04")}
+          style={{
+            color:
+              selectedContent === "reactRouter04" ? "#FCFAF2" : "#FCFAF265",
+          }}
+        >
+          React Router - 4
+        </ListButton>
+
+        <ListButton
+          onClick={() => onSelect("reactRouter05")}
+          style={{
+            color:
+              selectedContent === "reactRouter05" ? "#FCFAF2" : "#FCFAF265",
+          }}
+        >
+          React Router - 5
+        </ListButton>
+
+        <ListButton
+          onClick={() => onSelect("reactRouter06")}
+          style={{
+            color:
+              selectedContent === "reactRouter06" ? "#FCFAF2" : "#FCFAF265",
+          }}
+        >
+          React Router - 6
+        </ListButton>
+
+        <ListButton
+          onClick={() => onSelect("reactRouter07")}
+          style={{
+            color:
+              selectedContent === "reactRouter07" ? "#FCFAF2" : "#FCFAF265",
+          }}
+        >
+          React Router - 7
+        </ListButton>
+
       </ListContainer>
     </Aside>
   );

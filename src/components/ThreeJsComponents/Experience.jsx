@@ -118,7 +118,7 @@ export default function Experience() {
       <directionalLight position={[1, 2, -2]} intensity={4.5} />
       <ambientLight intensity={1.5} />
 
-      {/* <Environment resolution={32}>
+      <Environment resolution={32}>
         <group rotation={[-Math.PI / 4, -0.3, 0]}>
           <Lightformer intensity={20} rotation-x={Math.PI / 2} position={[0, 5, -9]} scale={[10, 10, 1]} />
           <Lightformer intensity={2} rotation-y={Math.PI / 2} position={[-5, 1, -1]} scale={[10, 2, 1]} />
@@ -126,102 +126,14 @@ export default function Experience() {
           <Lightformer intensity={2} rotation-y={-Math.PI / 2} position={[10, 1, 0]} scale={[20, 2, 1]} />
           <Lightformer type="ring" intensity={2} rotation-y={Math.PI / 2} position={[-0.1, -1, -5]} scale={10} />
         </group>
-      </Environment> */}
-
-      {/* <mesh
-        ref={reactIconRef}
-        geometry={nodes.reactIcon.geometry}
-        scale={30}
-        position={[0, 0, 1]}
-        rotation={[Math.PI / 2, 0, 0]}
-      >
-        <MeshTransmissionMaterial
-          color="lightsteelblue"
-          transmissionSampler
-          transmission={1.2}
-          thickness={0.3}
-          backsideThickness={0.2}
-          chromaticAberration={0.1}
-          distortion={0.5}
-          resolution={512}
-        />
-      </mesh> */}
-
-      {/* <mesh scale={0.9}>
-        <sphereGeometry args={[1, 16, 8]} />
-        <MeshTransmissionMaterial
-          color="lightsteelblue"
-          transmissionSampler
-          transmission={1.2}
-          thickness={0.3}
-          backsideThickness={0.2}
-          chromaticAberration={0.1}
-          distortion={0.5}
-          resolution={512}
-        />
-      </mesh> */}
+      </Environment>
 
       <mesh ref={planeRef} position={[0, 0, -1.5]} scale={15}>
         <planeGeometry args={[2, 1]} />
         <planeMaterial ref={planeMaterialRef} />
       </mesh>
 
-      {/* ------------------ */}
-
-      <group position={[0, 0, 3]}>
-        <Center>
-          <Text3D
-          position={[0, 0.7, 0]}
-            font="./fonts/helvetiker_regular.typeface.json"
-            size={1.2}
-            height={0.2}
-            curveSegments={12}
-            bevelEnabled
-            bevelThickness={0.02}
-            bevelSize={0.02}
-            bevelOffset={0}
-            bevelSegments={5}
-          >
-            REACT
-            <MeshTransmissionMaterial
-              color="lightsteelblue"
-              transmissionSampler
-              transmission={1.2}
-              thickness={0.3}
-              backsideThickness={0.2}
-              chromaticAberration={0.1}
-              distortion={0.5}
-              resolution={512}
-            />
-          </Text3D>
-          <Text3D
-          position={[0, -0.7, 0]}
-            font="./fonts/helvetiker_regular.typeface.json"
-            size={1.2}
-            height={0.2}
-            curveSegments={12}
-            bevelEnabled
-            bevelThickness={0.02}
-            bevelSize={0.02}
-            bevelOffset={0}
-            bevelSegments={5}
-          >
-            ESSENTIALS
-            <MeshTransmissionMaterial
-              color="lightsteelblue"
-              transmissionSampler
-              transmission={1.2}
-              thickness={0.3}
-              backsideThickness={0.2}
-              chromaticAberration={0.1}
-              distortion={0.5}
-              resolution={512}
-            />
-          </Text3D>
-        </Center>
-      </group>
-
-      {[...Array(100)].map((value, index) => (
+      {[...Array(300)].map((value, index) => (
         <group
           key={index}
           position={[
@@ -229,16 +141,16 @@ export default function Experience() {
             (Math.random() - 0.5) * 10,
             (Math.random()) * 10,
           ]}
-          scale={3 + Math.random() * 2}
+          scale={5 + Math.random() * 6}
           rotation={[Math.random() * Math.PI, Math.random() * Math.PI, 0]}
         >
-          <mesh
+          <mesh 
+            scale={0.03} 
+            // material={material}
+            geometry={torusGeometry}
             ref={(element) => (donutsRef.current[index] = element)}
-            // geometry={torusGeometry}
-            geometry={nodes.reactIcon.geometry}
-            material={material}
           >
-            {/* <MeshTransmissionMaterial
+            <MeshTransmissionMaterial
               color="lightsteelblue"
               transmissionSampler
               transmission={1.2}
@@ -247,20 +159,7 @@ export default function Experience() {
               chromaticAberration={0.1}
               distortion={0.5}
               resolution={512}
-            /> */}
-          </mesh>
-          <mesh scale={0.03} material={material}>
-            <sphereGeometry args={[1, 16, 8]} />
-            {/* <MeshTransmissionMaterial
-              color="lightsteelblue"
-              transmissionSampler
-              transmission={1.2}
-              thickness={0.3}
-              backsideThickness={0.2}
-              chromaticAberration={0.1}
-              distortion={0.5}
-              resolution={512}
-            /> */}
+            />
           </mesh>
         </group>
       ))}

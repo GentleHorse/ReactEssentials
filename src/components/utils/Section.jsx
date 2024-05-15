@@ -13,6 +13,7 @@ export default function Section({ title, children, ...props }) {
       margin: 1rem 0;
       padding: 0;
       display: flex;
+      flex-direction: column;
       gap: 0.5rem;
       list-style: none;
     }
@@ -22,9 +23,9 @@ export default function Section({ title, children, ...props }) {
       border: none;
       border-radius: 6px;
       background-color: transparent;
-      color: #8aba91;
+      color: #ffffff;
       font-family: 'Raleway', sans-serif;
-      font-size: 1rem;
+      font-size: 1.2rem;
       cursor: pointer;
       transition: all 0.2s ease-in-out;
     }

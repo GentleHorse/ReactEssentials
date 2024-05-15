@@ -28,16 +28,20 @@ body {
 
 main {
   display: flex;
-  gap: 2rem;
+  gap: 1.8rem;
   min-height: 100vh;
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
 
 #content {
-  width: 80%;
+  width: 90%;
   max-width: 120rem;
   margin: 0 auto;
+}
+
+.tab-content {
+  flex-grow: 2;
 }
 
 a {

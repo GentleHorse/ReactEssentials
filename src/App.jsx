@@ -33,6 +33,10 @@ import ReduxAdvanced from "./components/ReduxAdvanced/ReduxAdvanced.jsx";
 import ReactRouter01 from "./components/ReactRouter01/ReactRouter01.jsx";
 import ReactRouter02 from "./components/ReactRouter02/ReactRouter02.jsx";
 import ReactRouter03 from "./components/ReactRouter03/ReactRouter03.jsx";
+import ReactRouter04 from "./components/ReactRouter04/ReactRouter04.jsx";
+import ReactRouter05 from "./components/ReactRouter05/ReactRouter05.jsx";
+import ReactRouter06 from "./components/ReactRouter06/ReactRouter06.jsx";
+import ReactRouter07 from "./components/ReactRouter07/ReactRouter07.jsx";
 
 function App() {
   const [selectedContent, setSelectedContent] = useState("coreConcept");
@@ -168,6 +172,22 @@ function App() {
       content = <ReactRouter03 />;
       break;
 
+    case "reactRouter04":
+      content = <ReactRouter04 />;
+      break;
+
+    case "reactRouter05":
+      content = <ReactRouter05 />;
+      break;
+
+    case "reactRouter06":
+      content = <ReactRouter06 />;
+      break;
+
+    case "reactRouter07":
+      content = <ReactRouter07 />;
+      break;
+
     default:
       content = <p>Oops... no content selected ???</p>;
   }
@@ -181,7 +201,7 @@ function App() {
           onSelect={selectContentHandler}
           selectedContent={selectedContent}
         />
-        <div>
+        <div className="tab-content">
           <div id="content">{content}</div>
         </div>
       </main>
