@@ -367,6 +367,16 @@ export default function SideBar({ onSelect, selectedContent }) {
           React Router - 7
         </ListButton>
 
+        <ListButton
+          onClick={() => onSelect("authentication01")}
+          style={{
+            color:
+              selectedContent === "authentication01" ? "#FCFAF2" : "#FCFAF265",
+          }}
+        >
+          Authentication - 1
+        </ListButton>
+
       </ListContainer>
     </Aside>
   );

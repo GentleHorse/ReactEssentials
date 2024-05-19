@@ -37,6 +37,7 @@ import ReactRouter04 from "./components/ReactRouter04/ReactRouter04.jsx";
 import ReactRouter05 from "./components/ReactRouter05/ReactRouter05.jsx";
 import ReactRouter06 from "./components/ReactRouter06/ReactRouter06.jsx";
 import ReactRouter07 from "./components/ReactRouter07/ReactRouter07.jsx";
+import Authentication01 from "./components/Authentication01/Authentication01.jsx";
 
 function App() {
   const [selectedContent, setSelectedContent] = useState("coreConcept");
@@ -186,6 +187,10 @@ function App() {
 
     case "reactRouter07":
       content = <ReactRouter07 />;
+      break;
+
+    case "authentication01":
+      content = <Authentication01 />;
       break;
 
     default:
