@@ -11,11 +11,14 @@ import {
   useMatcapTexture,
   Center,
   Text3D,
+  Wireframe,
 } from "@react-three/drei";
 import { Perf } from "r3f-perf";
 import { useControls, button } from "leva";
 import vertexShader from "./shaders/plane/vertex.glsl";
 import fragmentShader from "./shaders/plane/fragment.glsl";
+import waterVertexShader from "./shaders/water/vertex.glsl";
+import waterFragmentShader from "./shaders/water/fragment.glsl";
 
 const PlaneMaterial = shaderMaterial(
   {
@@ -24,10 +27,34 @@ const PlaneMaterial = shaderMaterial(
     uColorEnd: new THREE.Color("#1b9dee"),
   },
   vertexShader,
-  fragmentShader
+  fragmentShader,
 );
 
 extend({ PlaneMaterial });
+
+const WaterMaterial = shaderMaterial(
+  {
+    uTime: 0,
+    
+    uBigWavesElevation: 0.2,
+    uBigWaveFrequency: new THREE.Vector2(4, 1.5),
+    uBigWavesSpeed: 0.05,
+
+    uSmallWavesElevation: 0.15,
+    uSmallWavesFrequency: 3,
+    uSmallWavesSpeed: 0.08,
+    uSmallWavesIteration: 4,
+
+    uDepthColor: new THREE.Color("#0000ff"),
+    uSurfaceColor: new THREE.Color("#00abf5"),
+    uColorOffset: 0.08, 
+    uColorMultiplier: 5,
+  },
+  waterVertexShader,
+  waterFragmentShader
+);
+
+extend({ WaterMaterial });
 
 const torusGeometry = new THREE.TorusGeometry(1, 0.6, 16, 32);
 const material = new THREE.MeshMatcapMaterial();
@@ -113,7 +140,7 @@ export default function Experience() {
 
       {/* <Perf position="top-left" /> */}
 
-      {/* <OrbitControls makeDefault /> */}
+      <OrbitControls makeDefault />
 
       <directionalLight position={[1, 2, -2]} intensity={4.5} />
       <ambientLight intensity={1.5} />
@@ -128,12 +155,12 @@ export default function Experience() {
         </group>
       </Environment>
 
-      <mesh ref={planeRef} position={[0, 0, -1.5]} scale={15}>
-        <planeGeometry args={[2, 1]} />
-        <planeMaterial ref={planeMaterialRef} />
+      <mesh ref={planeRef} position={[0, 0, 0]} rotation={[-Math.PI * 0.5, 0, 0]} scale={1}>
+        <planeGeometry args={[3, 3, 512, 512]} />
+        <waterMaterial ref={planeMaterialRef} />
       </mesh>
 
-      {[...Array(300)].map((value, index) => (
+      {/* {[...Array(300)].map((value, index) => (
         <group
           key={index}
           position={[
@@ -162,7 +189,7 @@ export default function Experience() {
             />
           </mesh>
         </group>
-      ))}
+      ))} */}
     </>
   );
 }
