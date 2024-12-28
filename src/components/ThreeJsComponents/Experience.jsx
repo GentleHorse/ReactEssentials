@@ -45,8 +45,8 @@ const WaterMaterial = shaderMaterial(
     uSmallWavesSpeed: 0.08,
     uSmallWavesIteration: 4,
 
-    uDepthColor: new THREE.Color("#0000ff"),
-    uSurfaceColor: new THREE.Color("#00abf5"),
+    uDepthColor: new THREE.Color("#0B1013"),
+    uSurfaceColor: new THREE.Color("#006284"),
     uColorOffset: 0.08, 
     uColorMultiplier: 5,
   },

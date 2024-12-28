@@ -11,6 +11,7 @@ const CoreConceptSectionContainer = styled.section`
 
   & h2 {
     text-align: center;
+    font-size: 80px;
     font-family: 'Raleway', sans-serif;
     margin: 0 0 1.5rem 0;
     color: #8aba90;
@@ -21,6 +22,7 @@ const CoreConceptSectionContainer = styled.section`
     padding: 0;
     margin: 0;
     display: flex;
+    flex-direction: column;
     gap: 5rem;
     flex-wrap: wrap;
     justify-content: center;
@@ -29,11 +31,12 @@ const CoreConceptSectionContainer = styled.section`
   & li {
     width: 20rem;
     text-align: center;
+    margin: auto;
   }
 
   & li img {
-    height: 10rem;
-    width: 10rem;
+    height: 20rem;
+    width: 20rem;
     object-fit: cover;
   }
 
@@ -49,7 +52,7 @@ const CoreConceptSectionContainer = styled.section`
 export default function CoreConcepts() {
   return (
     <CoreConceptSectionContainer>
-      <h2>Core Concepts</h2>
+      {/* <h2>Core Concepts</h2> */}
       <ul>
         {CORE_CONCEPTS.map((conceptItem) => (
           <CoreConcept key={conceptItem.title} {...conceptItem} />
